@@ -35,6 +35,9 @@ export default async function handler(req, res) {
                         quantity: item.quantity
                     }
                 }),
+                shipping_address_collection: {
+                  allowed_countries: ['US', 'CA','PH'],
+                },
                 success_url: `${req.headers.origin}/success`,
                 cancel_url: `${req.headers.origin}/canceled`,
         }
